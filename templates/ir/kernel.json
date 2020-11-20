@@ -1,0 +1,5 @@
+{
+  "argv": ["/bin/bash","swan_env","STACK","PLATFORM","R", "--slave", "-e", "options(bitmapType='cairo');IRkernel::main()", "--args", "{connection_file}"],
+  "display_name": "R",
+  "language": "R"
+}

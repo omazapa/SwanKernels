@@ -1,0 +1,5 @@
+{
+ "display_name": "Python",
+ "language": "python",
+ "argv": ["/bin/bash","swan_env","STACK","PLATFORM", "PYTHON", "-f","{connection_file}"]
+}
