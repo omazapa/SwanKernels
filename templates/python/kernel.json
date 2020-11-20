@@ -1,10 +1,7 @@
 {
     "display_name": "Python #",
     "language": "python",
-    "argv": ["/bin/bash","swan_env","CMS","CMSSW","SCRAM",
-     "python#","-m","ipykernel_launcher",
-     "-f",  
-     "{connection_file}"
-    ]
+    "argv": ["/bin/bash","swan_env","REPO","STACK","PLATFORM",
+             "python#","-m","ipykernel_launcher","-f","{connection_file}"]
 }
 
