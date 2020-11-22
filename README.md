@@ -1,4 +1,23 @@
-# Package to generated SWAN kernels for JupyterLab
+# SwanKernels
+
+Packlage that provides SWAN Kernels for:
+* Multiple CVMFS repos like CMS and SFT
+* Mutiple languages like python, R, octave, ROOT C++ and Go
+
+## Requirements
+
+Besides Jupyter, this extension requires SwanProject.
+
+## Install
+
+Install the package and the nbextension:
+
+```bash
+pip install swankernels
+```
+
+# Generating SWAN kernels for JupyterLab
+TODO
 
 # Using scram_list_filter
 
