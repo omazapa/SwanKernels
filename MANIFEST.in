@@ -1,0 +1,3 @@
+recursive-include swankernels/ kernels.json
+recursive-include swankernels/templates *.*
+recursive-include swankernels/kernels *.*

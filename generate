@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+from swankernels.generator import create_kernels
+from swankernels.config import get_kernels, get_path
+import sys
+def main():
+    kernels=get_kernels()
+    output_path="./kernels"
+    create_kernels(kernels,sys.argv[1])
+if __name__ == "__main__":
+    main()
