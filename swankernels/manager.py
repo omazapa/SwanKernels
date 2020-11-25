@@ -10,6 +10,10 @@ class SwanKernelSpecManager(KernelSpecManager):
     def __init__(self, **kwargs):
         super(SwanKernelSpecManager, self).__init__(**kwargs)
 
+    @staticmethod
+    def set_project_path(project_path):
+        SwanKernelSpecManager.project_path = project_path
+         
     def set_project_kernel_path(self):
         os.environ["JUPYTER_PATH"]=self.project_path+"/.local/"
 
