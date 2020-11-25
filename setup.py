@@ -54,10 +54,10 @@ setup_args = dict(
 
 
 if __name__ == "__main__":
-    kernel_prefix = "./kernels"
-    os.system("./generate "+kernel_prefix)
-    DATA_FILES = []
-    for kernel in os.listdir(kernel_prefix):
-        DATA_FILES.append(('share/jupyter/kernels/'+kernel, glob.glob(kernel_prefix+"/"+kernel+"/*")))
-    setup_args["data_files"]=DATA_FILES
+    #kernel_prefix = "./kernels"
+    #os.system("./generate "+kernel_prefix)
+    #DATA_FILES = []
+    #for kernel in os.listdir(kernel_prefix):
+    #    DATA_FILES.append(('share/jupyter/kernels/'+kernel, glob.glob(kernel_prefix+"/"+kernel+"/*")))
+    #setup_args["data_files"]=DATA_FILES
     setuptools.setup(**setup_args)
