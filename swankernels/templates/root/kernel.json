@@ -1,7 +1,7 @@
 {
  "display_name": "ROOT C++",
  "language": "c++",
- "argv": ["/bin/bash","swan_env","REPO","STACK","PLATFORM",
+ "argv": ["/bin/bash","swan_env","REPO","STACK","PLATFORM","SOURCE", ".",
           "python","-m","JupyROOT.kernel.rootkernel","-f","{connection_file}"
  ]
 }

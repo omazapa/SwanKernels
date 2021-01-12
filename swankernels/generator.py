@@ -4,7 +4,7 @@ from distutils.dir_util import copy_tree
 from swankernels.config import get_templates_path
 
 
-def create_kernel_from_template(repo, stack, platform, kernel, output_path):
+def create_kernel_from_template(repo, stack, platform, source, kernel, output_path):
     kernel_path = repo+"_"+stack+"_"+platform+"_"+kernel
     generated_path = output_path+"/"+kernel_path
     template_path = get_templates_path()
@@ -33,18 +33,18 @@ def create_kernel_from_template(repo, stack, platform, kernel, output_path):
         kernel_data = kernel_data.replace("REPO", repo)
         kernel_data = kernel_data.replace("STACK", stack)
         kernel_data = kernel_data.replace("PLATFORM", platform)
+        kernel_data = kernel_data.replace("SOURCE", source)
 
     with open(generated_path+'/kernel.json', 'w') as f:
         f.write(kernel_data)
 
 
-def create_kernels(data,output_path):
-    for repo in data.keys():
-        for item in data[repo]:
-            for stack in item['STACKS']:
-                kernel_path='sft_'+stack
-                for platform in item['PLATFORMS']:
-                    for kernel in item['KERNELS']:
-                        kernel_full=repo+"_"+stack+"_"+platform+"_"+kernel
-                        print("GENERATING = "+kernel_full)
-                        create_kernel_from_template(repo,stack,platform,kernel,output_path)
+# def create_kernels(data,output_path):
+#     for repo in data.keys():
+#         for item in data[repo]:
+#             for stack in item['STACKS']:
+#                 for platform in item['PLATFORMS']:
+#                     for kernel in item['KERNELS']:
+#                         kernel_full=repo+"_"+stack+"_"+platform+"_"+kernel
+#                         print("GENERATING = "+kernel_full)
+#                         create_kernel_from_template(repo,stack,platform,kernel,output_path)

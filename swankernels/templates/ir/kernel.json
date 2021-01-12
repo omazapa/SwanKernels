@@ -1,6 +1,6 @@
 {
   "display_name": "R",
   "language": "R",
-  "argv": ["/bin/bash","swan_env","REPO","STACK","PLATFORM",
+  "argv": ["/bin/bash","swan_env","REPO","STACK","PLATFORM","SOURCE", ".",
            "R", "--slave", "-e", "options(bitmapType='cairo');IRkernel::main()", "--args", "{connection_file}"]
 }

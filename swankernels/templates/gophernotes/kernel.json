@@ -1,7 +1,7 @@
 {
   "display_name": "Go",
   "language": "go",
-  "argv": ["/bin/bash","swan_env","REPO","STACK","PLATFORM",
+  "argv": ["/bin/bash","swan_env","REPO","STACK","PLATFORM","SOURCE", ".",
 		"gophernotes",
     	"{connection_file}"
     	]
